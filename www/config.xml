@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.robertfraher.testapp"
+        id        = "com.robertfraher.testApp"
         version   = "2.0.0">
     <name>TestApp</name>
 
     <description>
-        Test app
+        Responsive Application sample application.
     </description>
 
     <author href="http://phonegap.com" email="support@phonegap.com">
@@ -16,9 +16,12 @@
     <feature name="http://api.phonegap.com/1.0/device" />
 
     <preference name="phonegap-version" value="2.1.0" />
-    <preference name="orientation"      value="portrait" />
-    <preference name="target-device"    value="tablet" />
-    <preference name="fullscreen"       value="true" />
+    <preference name="orientation"      value="default" />
+    <preference name="target-device"    value="universal" />
+    <preference name="fullscreen"       value="false" />
+	
+	<plugin name="Camera" value="CDVCamera" />
+	<plugin name="Canvas2ImagePlugin" value="Canvas2ImagePlugin" />
 
     <icon src="icon.png" />
     
