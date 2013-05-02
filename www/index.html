@@ -21,8 +21,12 @@
     
         <canvas id="myCanvas"></canvas>
             
-            <div id="myButtonHolder">
-            	<a id="myButton" href="#"></a>
+            <div class="myButtonHolder">
+            	<a class="myButton" id="myButton1" href="#"></a>
+            </div>
+            
+            <div class="myButtonHolder">
+            	<a class="myButton" id="myButton2" href="#"></a>
             </div>
             
         </section>
@@ -56,9 +60,15 @@
 				
 			}
 		
-			$('#myButton').on('tap', function(event){
-				alert("My button tapped!");
+			$('#myButton1').on('tap', function(event){
+				alert("My button 1 tapped!");
 				useExistingPhoto(event);
+				event.preventDefault();
+			});
+			
+			$('#myButton2').on('tap', function(event){
+				alert("My button 2 tapped!");
+				saveImage();
 				event.preventDefault();
 			});
 			
@@ -125,7 +135,6 @@
 			
 			imageObject.onload = function() {
 				ctx.drawImage(imageObject, 0, 0);
-				saveImage();
 			};
 			
 			function saveImage(){
