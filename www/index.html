@@ -54,20 +54,6 @@
 				*/
 				alert('Cordova is ready!');
 				
-				var canvas2ImagePlugin = window.plugins.canvas2ImagePlugin;
-				alert("canvas2ImagePlugin: "+canvas2ImagePlugin);
-				canvas2ImagePlugin.saveImageDataToLibrary(
-				
-					function(msg){
-						alert("msg: "+msg);
-						console.log(msg);
-					}, 
-					function(err){
-						alert("err: "+err);
-						console.log(err);
-					}, 
-					'myCanvas'
-				);
 			}
 		
 			$('#myButton').on('tap', function(event){
@@ -139,6 +125,24 @@
 			
 			imageObject.onload = function() {
 				ctx.drawImage(imageObject, 0, 0);
+				saveImage();
+			};
+			
+			function saveImage(){
+				var canvas2ImagePlugin = window.plugins.canvas2ImagePlugin;
+				alert("canvas2ImagePlugin: "+canvas2ImagePlugin);
+				canvas2ImagePlugin.saveImageDataToLibrary(
+				
+					function(msg){
+						alert("msg: "+msg);
+						console.log(msg);
+					}, 
+					function(err){
+						alert("err: "+err);
+						console.log(err);
+					}, 
+					'myCanvas'
+				);
 			};
 			
 			// there was an error capturing the photo:
