@@ -26,8 +26,8 @@
 		}
 		var canvas = document.getElementById(canvasId);
 		alert('canvas: '+canvas);
-		var imageData = canvas.toDataURL().replace(/data:image\/png;base64,/,'');
-		//var imageData = canvas.toDataURL();
+		//var imageData = canvas.toDataURL().replace(/data:image\/png;base64,/,'');
+		var imageData = canvas.toDataURL();
 		alert('imageData: '+imageData);
 		return cordova.exec(successCallback, failureCallback, "Canvas2ImagePlugin","saveImageDataToLibrary",[imageData]);
 	};
