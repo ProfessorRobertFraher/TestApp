@@ -15,15 +15,19 @@
 	Canvas2ImagePlugin.prototype.saveImageDataToLibrary = function(successCallback, failureCallback, canvasId) {
 		// successCallback required
 		if (typeof successCallback != "function") {
+			alert("Canvas2ImagePlugin Error: successCallback is not a function");
 			console.log("Canvas2ImagePlugin Error: successCallback is not a function");
 			return;
 		}
 		if (typeof failureCallback != "function") {
+			alert("Canvas2ImagePlugin Error: failureCallback is not a function");
 			console.log("Canvas2ImagePlugin Error: failureCallback is not a function");
 			return;
 		}
 		var canvas = document.getElementById(canvasId);
+		alert('canvas: '+canvas);
 		var imageData = canvas.toDataURL().replace(/data:image\/png;base64,/,'');
+		alert('imageData: '+imageData);
 		return cordova.exec(successCallback, failureCallback, "Canvas2ImagePlugin","saveImageDataToLibrary",[imageData]);
 	};
 

@@ -1,3 +1,9 @@
+#myCanvas{
+	width:960px;
+	height:480px;
+	background-color:#cccccc;
+}
+
 #myButtonHolder{
 	width:50px;
 	height:50px;
