@@ -13,7 +13,7 @@
         <script src="js/jquery-1.8.2.min.js"></script>
         <script type="text/javascript" src="js/jquery.mobile.custom.min.js"></script>
         <script type="text/javascript" src="phonegap.js"></script>
-        <script src="js/Canvas2ImagePlugin.js" type="text/javascript"></script>
+        <script src="Canvas2ImagePlugin.js" type="text/javascript"></script>
     
     </head>
     
@@ -103,34 +103,6 @@
 				
 				imageObject.src = imageURI;
 				
-				/*
-			  var fail, ft, options, params, win;
-			  // callback for when the photo has been successfully uploaded:
-			  success: function(response) {
-				alert("Your photo has been uploaded!");
-			  };
-			  
-			  // callback if the photo fails to upload successfully.
-			  fail: function(error) {
-				alert("An error has occurred: Code = " + error.code);
-			  };
-			  
-			  options = new FileUploadOptions();
-			  // parameter name of file:
-			  options.fileKey = "my_image";
-			  // name of the file:
-			  options.fileName = imageURI.substr(imageURI.lastIndexOf('/') + 1);
-			  // mime type:
-			  options.mimeType = "text/plain";
-			  params = {
-				val1: "some value",
-				val2: "some other value"
-			  };
-			  
-			  options.params = params;
-			  ft = new FileTransfer();
-			  ft.upload(imageURI, 'http://example.com/path/to/service', success, fail, options);
-			  */
 			};
 			
 			imageObject.onload = function() {
